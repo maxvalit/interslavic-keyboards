@@ -1,0 +1,66 @@
+@import "colors"
+
+$u: 50px
+
+.Keyboard
+  .cap
+    cursor: pointer
+    transition: background-color 75ms, box-shadow 75ms, transform 75ms
+    text-align: center
+    height: $u
+    width: $u
+    font-size: 25px
+
+    margin: 5px
+    padding: 5px
+    //border: 2px solid #757575
+    border-radius: 10px
+    display: inline-block
+    font-weight: 500
+    background-color: #d1d1d1
+
+    box-shadow: rgba(0,0,0,0.2) 3px 3px 5px 0
+
+    span
+      line-height: $u
+    svg
+      width: 40px
+      height: 40px
+      padding: 5px
+    &.press
+      box-shadow: rgba(0,0,0,0.3) 3px 5px 7px 0
+      background-color: darken(#c9c9c9,5)
+      transform: translateY(3px)
+    &.modifier
+      background-color: lighten(desaturate($blue,50),40)
+      &.press
+        background-color: lighten(desaturate($blue,50),30)
+    &.control
+      background-color: lighten(desaturate($red,20),20)
+      &.press
+        background-color: lighten(desaturate($red,20),10)
+
+    &.one5
+      width: calc($u * 1.5)
+
+    &.one75
+      width: calc($u * 1.75)
+
+    &.one25
+      width: calc($u * 1.25)
+
+    &.two0
+      width: calc($u * 2)
+
+    &.two25
+      width: calc($u * 2.25)
+
+    &.two75
+      width: calc($u * 2.75)
+    &.three
+      width: calc($u * 3.25)
+
+    &.space
+      width: calc($u * 9)
+
+
