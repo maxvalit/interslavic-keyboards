@@ -128,8 +128,8 @@ function App() {
             </Row>
             <Row justify={'center'} >
                 <Col xs={'content'}>
-                    <a className={'download'} href={"./keyboards/mslavlat.zip"}>Windows - Latinica - ŽĚERTY</a><br/>
-                    <a className={'download'} href={"./keyboards/mslavcyr.zip"}>Windows - Кирилица - JЦУКЕН </a><br/>
+                    <a className={'download'} href={"/interslavic/keyboards/win/mslavlat.zip"}>Windows - Latinica - ŽĚERTY</a><br/>
+                    <a className={'download'} href={"/interslavic/keyboards/win/mslavcyr.zip"}>Windows - Кирилица - JЦУКЕН </a><br/>
                 </Col>
             </Row>
             </Container>
