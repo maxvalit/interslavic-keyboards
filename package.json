@@ -25,6 +25,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://valit.dev/interslavic",
   "browserslist": {
     "production": [
       ">0.2%",
