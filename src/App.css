@@ -16,6 +16,7 @@ body {
     border: none;
     border-radius : 5px;
     font-size:  2rem;
+    padding: 5px
 
 }
 .textbox:focus-visible{

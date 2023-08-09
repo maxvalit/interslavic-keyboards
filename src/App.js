@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {Row, Col} from 'react-grid-system'
+import {Row, Col, Container} from 'react-grid-system'
 import React, {useEffect, useRef, useState} from "react";
 import {Keyboard} from "./Keyboard";
 import {qwerty, IslLatin, IslCyrillic} from "./layouts";
@@ -70,6 +70,7 @@ function App() {
 
     return (
         <div className="App">
+            <Container>
             <Row justify={'center'} style={{'margin': '150px 0 50px 0'}}>
                 <Col xs={'content'}>
                     <textarea rows={1} className={'textbox'} type={'text'} value={text}/>
@@ -125,12 +126,13 @@ function App() {
                     <h2>Dostati | Достати</h2>
                 </Col>
             </Row>
-            <Row justify={'center'}>
+            <Row justify={'center'} >
                 <Col xs={'content'}>
                     <a className={'download'} href={process.env.public_url+"/keyboards/mslavlat.zip"}>Windows - Latinica - ŽĚERTY</a><br/>
                     <a className={'download'} href={process.env.public_url+"/keyboards/mslavcyr.zip"}>Windows - Кирилица - JЦУКЕН </a><br/>
                 </Col>
             </Row>
+            </Container>
         </div>
     );
 }

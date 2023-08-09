@@ -9,7 +9,7 @@ $u: 50px
     text-align: center
     height: $u
     width: $u
-    font-size: 25px
+    font-size: 28px
 
     margin: 5px
     padding: 5px
@@ -39,7 +39,10 @@ $u: 50px
       background-color: lighten(desaturate($red,20),20)
       &.press
         background-color: lighten(desaturate($red,20),10)
-
+    &.highlight
+      background-color: lighten(desaturate($yellow,20),10)
+      &.press
+        background-color: lighten(desaturate($yellow,20),0)
     &.one5
       width: calc($u * 1.5)
 

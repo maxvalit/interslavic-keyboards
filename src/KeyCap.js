@@ -103,7 +103,9 @@ export function KeyCap({
                            type,
                            code,
                            className,
-                           modifier,control
+                           modifier,
+                           control,
+                           hightlight
                        }) {
 
 
@@ -111,7 +113,8 @@ export function KeyCap({
     const isPressed = pressed[code] ? 'press' : ''
     const modifierClass = modifier ? 'modifier' : ''
     const contolClass = control ? 'control' : ''
-    return <div className={`cap ${type} ${sz} ${isPressed} ${className} ${modifierClass} ${contolClass}`}>
+    const highlightClass = hightlight ? 'highlight' : ''
+    return <div className={`cap ${type} ${sz} ${isPressed} ${className} ${modifierClass} ${contolClass} ${highlightClass}`}>
         {svgs[type] ?? (<span>{type ?? (shift ? upper : lower)}</span>)}
 
     </div>

@@ -9,10 +9,10 @@ export function Keyboard({pressed, layout, shiftState}) {
                 <Row justify={'center'}>
                     {
                         layout[0].map(
-                            ([lower, upper, code]) => <Col xs={'content'} style={{'padding': 0}}>
+                            ([lower, upper, code,highlight]) => <Col xs={'content'} style={{'padding': 0}}>
                                 <KeyCap shift={shiftState}
                                         lower={lower} code={code} key={code}
-                                        upper={upper} pressed={pressed}
+                                        upper={upper} pressed={pressed} hightlight={highlight}
 
                                 /> </Col>)}
 
@@ -28,11 +28,11 @@ export function Keyboard({pressed, layout, shiftState}) {
                     </Col>
                     {
                         layout[1].map(
-                            ([lower, upper, code]) => <Col xs={'content'} style={{'padding': 0}}>
+                            ([lower, upper, code,highlight]) => <Col xs={'content'} style={{'padding': 0}}>
                                 <KeyCap shift={shiftState}
                                         lower={lower} code={code}
                                         upper={upper} pressed={pressed}
-                                        key={lower}
+                                        key={lower} hightlight={highlight}
 
                                 /></Col>)}
                     <Col xs={'content'} style={{'padding': 0}}><KeyCap shift={shiftState}
@@ -46,11 +46,11 @@ export function Keyboard({pressed, layout, shiftState}) {
 
                     {
                         layout[2].map(
-                            ([lower, upper, code]) => <Col xs={'content'} style={{'padding': 0}}>
+                            ([lower, upper, code,highlight]) => <Col xs={'content'} style={{'padding': 0}}>
                                 <KeyCap shift={shiftState}
                                         lower={lower} code={code} key={code}
                                         upper={upper} pressed={pressed}
-
+                                        hightlight={highlight}
                                 /></Col>)}
 
                     <Col xs={'content'} style={{'padding': 0}}>
@@ -64,11 +64,11 @@ export function Keyboard({pressed, layout, shiftState}) {
 
                     {
                         layout[3].map(
-                            ([lower, upper, code]) => <Col xs={'content'} style={{'padding': 0}}> <KeyCap
+                            ([lower, upper, code,highlight]) => <Col xs={'content'} style={{'padding': 0}}> <KeyCap
                                 shift={shiftState}
                                 lower={lower} code={code}
                                 upper={upper} pressed={pressed}
-                                key={code}
+                                key={code} hightlight={highlight}
 
                             /> </Col>)}
                     <Col xs={'content'} style={{'padding': 0}}>
