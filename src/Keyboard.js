@@ -17,11 +17,12 @@ export function Keyboard({pressed, layout, shiftState}) {
                                 /> </Col>)}
 
 
-                    <Col xs={'content'} style={{'padding': 0}}> <KeyCap modifier type={'backspace'} code={'Backspace'}
-                                                                        pressed={pressed}/></Col>
+                    <Col xs={'content'} style={{'padding': 0}}>
+                        <KeyCap modifier type={'backspace'} code={'Backspace'}
+                                pressed={pressed}/></Col>
                 </Row>
 
-                <Row align={'center'}>
+                <Row justify={'center'}>
                     <Col xs={'content'} style={{'padding': 0}}>
                         <KeyCap pressed={pressed} type={'tab'} code={'Tab'} modifier/>
                     </Col>

@@ -22,5 +22,6 @@ body {
     border: none;
     outline: none;
 }
-label{padding-right: 75px}
+label{padding-right: 75px; font-size: 24px}
 img.flag{width: 21px; height:14px ; padding: 0 5px}
+a.download{font-size: 26px; margin: 5px; display: inline-block}

@@ -95,7 +95,7 @@ export const IslLatin =[
         ['k', 'K','KeyK'],
         ['l', ':','KeyL'],
         [';', '"',"Semicolon"],
-        ['\'', '"','Quote'],
+        ['\'', '|','Quote'],
 
     ],
     [

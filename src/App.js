@@ -82,35 +82,53 @@ function App() {
                     </button>
                 </Col>
             </Row>
-            <Row justify={'center'} style={{'margin': '150px 0 50px 0'}}>
-                <Col xs={'content'}>
-                    <label htmlFor="lyt-qwerty">
-                        <input name='lay' id={'lyt-qwerty'} checked={globalLayout === qwerty}
-                                                       type={'radio'} onClick={() => {
-                        globalLayout = qwerty
-                        setLayout(qwerty)
-                    }}/>
 
-                        <img alt={'uk flag'} src={ukFlag} className={'flag'}/>
-                        QWERTY</label>
-                    <label htmlFor="lyt-isl-lat"><input name='lay' id={'lyt-isl-lat'} type={'radio'} onClick={() => {
-                        globalLayout = IslLatin
-                        setLayout(IslLatin)
-                    }}/>
-                        <img alt={'isl flag'} src={islFlag} className={'flag'}/> MSl ŽĚERTY</label>
-                    <label htmlFor="lyt-isl-cyr"><input name='lay' id={'lyt-isl-cyr'} type={'radio'} onClick={() => {
-                        globalLayout = IslCyrillic
-                        setLayout(IslCyrillic)
-                    }}/><img alt={'isl flag'} src={islFlag} className={'flag'}/> МСл JЦУКЕН</label>
-                </Col>
-
-            </Row>
             <Row justify={'center'} style={{'margin': '100px 0 50px 0'}}>
                 <Col xs={'content'}>
                     <Keyboard pressed={pressed} layout={layout} onChange={x => setText(x)}
                               shiftState={global['ShiftLeft'] || global['ShiftRight']}
 
                     />
+                </Col>
+            </Row>
+            <Row justify={'center'} style={{'margin': '50px 0 50px 0'}}>
+                <Col xs={'content'}>
+
+                    <label htmlFor="lyt-qwerty">
+                        <input name='lay' id={'lyt-qwerty'} checked={globalLayout === qwerty}
+                               type={'radio'} onClick={() => {
+                            globalLayout = qwerty
+                            setLayout(qwerty)
+                        }}/>
+
+                        <img alt={'uk flag'} src={ukFlag} className={'flag'}/>
+                        QWERTY</label>
+                    <label htmlFor="lyt-isl-lat">
+                        <input name='lay' id={'lyt-isl-lat'} type={'radio'}
+                               onClick={() => {
+                                   globalLayout = IslLatin
+                                   setLayout(IslLatin)
+                               }}/>
+                        <img alt={'isl flag'} src={islFlag} className={'flag'}/> MSl ŽĚERTY</label>
+                    <label htmlFor="lyt-isl-cyr">
+                        <input name='lay' id={'lyt-isl-cyr'} type={'radio'}
+                               onClick={() => {
+                                   globalLayout = IslCyrillic
+                                   setLayout(IslCyrillic)
+                               }}/><img alt={'isl flag'} src={islFlag}
+                                        className={'flag'}/> МСл JЦУКЕН</label>
+
+                </Col>
+            </Row>
+            <Row justify={'center'}>
+                <Col xs={'content'}>
+                    <h2>Dostati | Достати</h2>
+                </Col>
+            </Row>
+            <Row justify={'center'}>
+                <Col xs={'content'}>
+                    <a className={'download'} href={process.env.public_url+"/keyboards/mslavlat.zip"}>Windows - Latinica - ŽĚERTY</a><br/>
+                    <a className={'download'} href={process.env.public_url+"/keyboards/mslavcyr.zip"}>Windows - Кирилица - JЦУКЕН </a><br/>
                 </Col>
             </Row>
         </div>
