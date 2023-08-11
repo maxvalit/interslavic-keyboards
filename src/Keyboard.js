@@ -65,7 +65,7 @@ export function Keyboard({pressed, layout, shiftState,onMouseUp,onMouseDown}) {
                     {
                         layout[3].map(
                             ([lower, upper, code,highlight]) => <Col xs={'content'} style={{'padding': 0}}> <KeyCap
-                                shift={shiftState}
+                                shift={shiftState} onMouseUp={onMouseUp} onMouseDown={onMouseDown}
                                 lower={lower} code={code}
                                 upper={upper} pressed={pressed}
                                 key={code} hightlight={highlight}
