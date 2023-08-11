@@ -6,7 +6,12 @@ body {
 }
 
 .App {
-
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -24,5 +29,6 @@ body {
     outline: none;
 }
 label{padding-right: 75px; font-size: 24px}
-img.flag{width: 21px; height:14px ; padding: 0 5px}
+img.flag{width: calc(12px * 3); height: calc(12px * 2) ; padding: 0 5px}
 a.download{font-size: 26px; margin: 5px; display: inline-block}
+input[type=radio]{height:25px; width: 25px}

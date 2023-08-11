@@ -13,18 +13,19 @@ let global = {}
 let globalText = ''
 let globalLayout = qwerty
 
+
 function App() {
 
     const [pressed, setPressed] = useState({})
     const [text, setText] = useState(globalText)
     const [layout, setLayout] = useState(qwerty)
 
-    const up = x => {
+    const up =x=> {
         let z = {...global, [x.code]: false}
         global = z
         setPressed(z)
 
-    }
+    };
     const down = x => {
         const z = {...global, [x.code]: true}
         global = z
@@ -65,6 +66,10 @@ function App() {
     useEffect(() => {
         window.document.addEventListener('keydown', down)
         window.document.addEventListener('keyup', up)
+        return ()=>{
+            window.document.removeEventListener('keydown', down)
+            window.document.removeEventListener('keyup', up)
+        }
     }, []);
 
 
@@ -88,6 +93,12 @@ function App() {
                 <Col xs={'content'}>
                     <Keyboard pressed={pressed} layout={layout} onChange={x => setText(x)}
                               shiftState={global['ShiftLeft'] || global['ShiftRight']}
+                              onMouseDown={(code)=>{
+                                  down({code})
+                              }}
+                              onMouseUp={(code)=>{
+                                  up({code})
+                              }}
 
                     />
                 </Col>
