@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import {Row, Col, Container} from 'react-grid-system'
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Keyboard} from "./Keyboard";
 import {qwerty, IslLatin, IslCyrillic} from "./layouts";
 import './Button.sass'
@@ -29,7 +28,6 @@ function App() {
     const down = x => {
         const z = {...global, [x.code]: true}
         global = z
-        console.log(global)
         setPressed(z)
         const shift = global['ShiftLeft'] || global['ShiftRight']
         if (['Tab', 'MetaLeft', 'MetaRight'].includes(x.code)) {
@@ -70,7 +68,7 @@ function App() {
             window.document.removeEventListener('keydown', down)
             window.document.removeEventListener('keyup', up)
         }
-    }, []);
+    }, [down,up]);
 
 
     return (
@@ -107,7 +105,7 @@ function App() {
                 <Col xs={'content'}>
 
                     <label htmlFor="lyt-qwerty">
-                        <input name='lay' id={'lyt-qwerty'} checked={globalLayout === qwerty}
+                        <input name='lay' id={'lyt-qwerty'} defaultChecked={globalLayout === qwerty}
                                type={'radio'} onClick={() => {
                             globalLayout = qwerty
                             setLayout(qwerty)
